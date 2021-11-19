@@ -8,9 +8,18 @@ namespace homework
 {
     class Point : Figure
     {
-        public override double  Area()
+        public Point(string name, Visibl visibility, Colour colour) : base(name, visibility, colour)
         {
-          return 1;
+        }
+
+        public override void GetInfo()
+        {
+            Console.WriteLine($" Фигура: {name},  Состояние {visibility}, Цвет {colour}");
+        }
+
+        public override double Area()
+        {
+            return 1;
         }
     }
 }

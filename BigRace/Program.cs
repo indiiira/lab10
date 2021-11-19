@@ -10,17 +10,26 @@ namespace BigRace
     {
         static void Main(string[] args)
         {
-            List<France> France =new List<France>(10);
-            France.Add(new France("Индира"));
-            France.Add(new France("Ира"));
-            France.Add(new France("Инна"));
-            France.Add(new France("Анна"));
-            France.Add(new France("Аня"));
-            France.Add(new France("Глеб"));
-            France.Add(new France("Миша"));
-            France.Add(new France("Маша"));
-            France.Add(new France("Рина"));
-            France.Add(new France("Арина"));
+            List<IGame> games = new List<IGame> { new Beach(), new Fishing(), new Hill(), new Mousetrap(), new Postmen(), new Sea(), new Calmar() };
+            string[] Russian = new string[15] { "Иван", "Андрей", "Яков", "Юрий", "Татьяна", "Мария", "Авдотья", "Елизавета", "Станислав", "Лис", "Гаара", "Нико", "Анко", "Грей", "Киба" };
+            string[] France = new string[15] { "Адель", "Женя", "Джераль", "Жеральд", "Жерар", "Люси", "Ванда", "Игнил", "Сакура", "Саске", "Акира", "Жаннет", "Жоан", "Жереми", "Жанна" };
+            string[] China = new string[15] { "Чон", "Сокджин", "Джин", "Юнбин", "Чонгук", "Тэхен", "Ким", "Намджун", "Юнги", "Мин", "Сехун", "Кай", "Минхо", "Сюзи", "Айю" };
+            string[] Ukraine = new string[15] { "Мика", "Миша", "Дима", "Оля", "Яра", "Микола", "Асина", "Петя", "Хизаши", "Олина", "Боруто", "Хинаба", "Ангел", "Неджи", "Хината" };
+            foreach (var game in games)
+            {
+                Team russia = new Team("Россия", Russian, game);
+                Team china = new Team("Китай", China, game);
+                Team ukraine = new Team("Украина", Ukraine, game);
+                Team france = new Team("Франция", France, game);
+                russia.PlayGame();
+                france.PlayGame();
+                china.PlayGame();
+                ukraine.PlayGame();
+                Console.WriteLine();
+            }
+
+            Console.ReadKey();
+
         }
     }
 }

@@ -10,10 +10,11 @@ namespace homework
     {
         static void Main(string[] args)
         {
-            Figure bob = new Rectangle("Прямоугольник", 1, "черный");
-            bob.MakeDinner(new PotatoMeal());
-            Console.WriteLine();
-            bob.MakeDinner(new SaladMeal());
+            Circle circle = new Circle("Circle", Visibl.vision, Colour.Black,3);
+            Console.WriteLine(circle.Area());
+            Console.WriteLine(circle.GetInfo());
+            //Console.WriteLine(circle.Moves());
+            Console.ReadKey();
         }
     }
 }

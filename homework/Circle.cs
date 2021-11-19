@@ -6,20 +6,36 @@ using System.Threading.Tasks;
 
 namespace homework
 {
-    class Circle:Point
+    class Circle:Point,IMove
     {
 
-        public double R { get; set; }
-        public Circle( double r)
+        public double r;
+        public Circle(string name, Visibl visibility, Colour colour, double r):base(name, visibility, colour)
         {
       
-            this.R = r;
+            this.r = r;
         }
         public override double Area()
         {
-            double s = 2 * Math.PI * R;
-            return s;
-        }
+            return  Math.PI * r*r;
             
+        }
+
+        public override void GetInfo()
+        {
+            Console.WriteLine($" Фигура: {name},  Состояние {visibility}, Цвет {colour}, Радиус{r}");
+        }
+
+        public void Moves()
+        {
+            Console.WriteLine("Фигура движется по вертикали:");
+            Console.WriteLine("Вверх на три клетки");
+            Console.WriteLine("Фигура движется по горизонтали:");
+            Console.WriteLine("Вправо на десять клеток");
+            Console.WriteLine("Фигура движется по вертикали:");
+            Console.WriteLine("Вниз на одну клетку ");
+            Console.WriteLine("Фигура движется по горизонтали:");
+            Console.WriteLine("Влево на пять клеток");
+        }
     }
 }
