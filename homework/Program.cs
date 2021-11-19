@@ -11,8 +11,8 @@ namespace homework
         static void Main(string[] args)
         {
             Circle circle = new Circle("Circle", Visibl.vision, Colour.Black,3);
-            Console.WriteLine(circle.Area());
-            Console.WriteLine(circle.GetInfo());
+           
+            circle.GetInfo();
             //Console.WriteLine(circle.Moves());
             Console.ReadKey();
         }

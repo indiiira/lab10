@@ -10,6 +10,7 @@ namespace homework
     {
 
         public double r;
+        public double s;
         public Circle(string name, Visibl visibility, Colour colour, double r):base(name, visibility, colour)
         {
       
@@ -23,7 +24,7 @@ namespace homework
 
         public override void GetInfo()
         {
-            Console.WriteLine($" Фигура: {name},  Состояние {visibility}, Цвет {colour}, Радиус{r}");
+            Console.WriteLine($" Фигура: {name},  Состояние {visibility}, Цвет {colour}, Радиус {r}, Площадь {}");
         }
 
         public void Moves()
