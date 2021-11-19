@@ -24,7 +24,7 @@ namespace homework
         }
         public override void GetInfo()
         {
-            Console.WriteLine($" Фигура: {name},  Состояние {visibility}, Цвет {colour}");
+            Console.WriteLine($" Фигура: {name},  Состояние {visibility}, Цвет {colour}, Ширина {Width}, Высота {Height}  ");
         }
         public void Moves()
         {

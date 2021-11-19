@@ -21,10 +21,10 @@ namespace homework
             return  Math.PI * r*r;
             
         }
-
+       
         public override void GetInfo()
         {
-            Console.WriteLine($" Фигура: {name},  Состояние {visibility}, Цвет {colour}, Радиус {r}, Площадь {}");
+            Console.WriteLine($" Фигура: {name},  Состояние {visibility}, Цвет {colour}, Радиус {r}");
         }
 
         public void Moves()
